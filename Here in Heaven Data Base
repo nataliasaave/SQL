@@ -1,0 +1,21 @@
+-Create store data base
+
+CREATE TABLE Here_in_heaven (id INTEGER PRIMARY KEY, NAME text, quantity INTEGER, price INTEGER, most_popular INTEGER);
+INSERT into here_in_heaven VALUES (1, "candles", 5, 30, 3);
+INSERT into here_in_heaven VALUES (2, "incence", 7, 24, 2);
+INSERT into here_in_heaven VALUES (3, "plants",5, 15, 4);
+INSERT into here_in_heaven VALUES (4, "tea",8, 25, 5);
+INSERT into here_in_heaven VALUES (5,"notebooks", 10, 38, 1);
+SELECT * FROM here_in_heaven;
+
+-Display database ordered by price
+
+SELECT * FROM here_in_heaven ORDER BY price;
+
+-Display database ordered by most popular item
+
+SELECT * FROM here_in_heaven Order by most_popular;
+
+-Diplay database by the total amount of products
+
+SELECT SUM(quantity) FROM here_in_heaven;
