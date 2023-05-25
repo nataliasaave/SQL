@@ -1,0 +1,58 @@
+CREATE table Famous_People (id integer PRIMARY KEY, 
+First_name text,
+last_name text,
+occupation text);
+
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES("Alicia", "Keys", 2);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Leonardo", "DiCaprio", 1);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("John", "Legend", 2);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Sherlock", "Holmes", 4);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Stephen", "King", 3);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Klark", "Kent", 4);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Calvin", "Harris", 2);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Charles", "Dickens", 3);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Jason", "Derulo", 2);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Bilbo", "Baggings", 4);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Lewis", "Carol", 3);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Mickey", "Mouse", 4);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Jennifer", "Lauwrence", 1);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Jay", "Gatsby", 4);
+INSERT INTO Famous_People (first_name, last_name, occupation) VALUES ("Channing", "Tatum", 1);
+
+
+
+CREATE TABLE Profession (id INTEGER PRIMARY KEY, title TEXT);
+
+INSERT INTO Profession VALUES (1, "Actor");
+INSERT INTO Profession VALUES (2, "Musician");
+INSERT INTO Profession VALUES (3, "Author");
+INSERT INTO Profession VALUES (4, "Fictional characters");
+
+SELECT f.first_name, f.last_name, p.title
+FROM Famous_People f 
+JOIN Profession p
+ON f.occupation=p.id;
+
+SELECT f.first_name, f.last_name, p.title
+FROM Famous_People f 
+JOIN Profession p
+ON f.occupation=p.id
+WHERE f.occupation=1;
+
+SELECT f.first_name, f.last_name, p.title
+FROM Famous_People f 
+JOIN Profession p
+ON f.occupation=p.id
+WHERE f.occupation=2;
+
+SELECT f.first_name, f.last_name, p.title
+FROM Famous_People f 
+JOIN Profession p
+ON f.occupation=p.id
+WHERE f.occupation=3;
+
+SELECT f.first_name, f.last_name, p.title
+FROM Famous_People f 
+JOIN Profession p
+ON f.occupation=p.id
+WHERE f.occupation=4;
